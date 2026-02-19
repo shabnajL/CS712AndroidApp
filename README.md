@@ -1,9 +1,9 @@
 # CS712AndroidApp 
 
 ## Assignment 1
->>> This repository is used for CS712 coursework.
+> This repository is used for CS712 coursework.
 
-It contains:
+It contains:<br>
 - A GitHub Project (Kanban board) to track assignments and course projects
 - GitHub issues (9) representing all assignments and projects for the course
 
@@ -33,11 +33,10 @@ Device Used: Samsung SM-M127G
 Android Version: Android 13 (API 33)
 
 App includes:
-
 >>> Main Activity Changes <br>
     - Adding a Start Service button to start the service<br>
     - Adding a Send Broadcast button to send a custom broadcast<br>
->>> Service <bold>Not working yet</bold> <br>
+>>> Service <br>
     - Create a foreground service<br>
     - When it is started, display a notification saying: The service has started<br>
 >>> Broadcast Receiver<br>
