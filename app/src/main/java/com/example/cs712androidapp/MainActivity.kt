@@ -1,8 +1,12 @@
 package com.example.cs712androidapp
 
+<<<<<<< HEAD
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.IntentFilter
+=======
+import android.content.Intent
+>>>>>>> 5292a051334932be9e39179953ab5afef46ef33d
 import android.os.Bundle
 import android.widget.Button
 import androidx.activity.ComponentActivity
@@ -18,9 +22,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.cs712androidapp.ui.theme.CS712AndroidAppTheme
 
 class MainActivity : ComponentActivity() {
+<<<<<<< HEAD
     private lateinit var receiver: MyBroadcastReceiver
 
     @SuppressLint("UnspecifiedRegisterReceiverFlag")
+=======
+>>>>>>> 5292a051334932be9e39179953ab5afef46ef33d
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -37,6 +44,10 @@ class MainActivity : ComponentActivity() {
 
         setContentView(R.layout.main_activity)
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5292a051334932be9e39179953ab5afef46ef33d
         // second activity using an explicit intent
         val buttonExplicit = findViewById<Button>(R.id.buttonExplicit)
         buttonExplicit.setOnClickListener {
@@ -51,6 +62,7 @@ class MainActivity : ComponentActivity() {
             val intent = Intent("com.example.cs712androidapp.ACTION_SECOND_ACTIVITY")
             startActivity(intent)
         }
+<<<<<<< HEAD
 
         // receiver initialization
         receiver = MyBroadcastReceiver()
@@ -79,6 +91,9 @@ class MainActivity : ComponentActivity() {
         unregisterReceiver(receiver)
     }
 
+=======
+    }
+>>>>>>> 5292a051334932be9e39179953ab5afef46ef33d
 }
 
 @Composable

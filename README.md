@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 # CS712AndroidApp 
 ---
 ## Assignment 1
+=======
+# CS712AndroidApp
+>>>>>>> 5292a051334932be9e39179953ab5afef46ef33d
 
 This repository is used for CS712 coursework.
 
@@ -9,6 +13,7 @@ It contains:
 - GitHub issues (9) representing all assignments and projects for the course
 
 The repository will be updated throughout the semester as assignments and projects are completed.
+<<<<<<< HEAD
 <br>
 ## Assignment 2
 ---
@@ -29,3 +34,5 @@ App includes:
     -	Including a button labeled Main Activity that returns to the main activity when clicked
 <br>
 ---
+=======
+>>>>>>> 5292a051334932be9e39179953ab5afef46ef33d

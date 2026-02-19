@@ -36,9 +36,12 @@
             </intent-filter>
         </activity>
 
+<<<<<<< HEAD
         <service android:name=".MyForegroundService"
             android:exported="false" />
 
+=======
+>>>>>>> 5292a051334932be9e39179953ab5afef46ef33d
     </application>
 
 </manifest>
