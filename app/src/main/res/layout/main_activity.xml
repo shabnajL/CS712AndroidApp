@@ -11,7 +11,7 @@
         android:id="@+id/textTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CS712\nAssignment 2: Create and Run an Android App"
+        android:text="CS712\nAssignment: Create and Run an Android App"
         android:textSize="30sp"
         android:layout_marginBottom="30dp"/>
 

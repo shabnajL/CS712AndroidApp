@@ -14,8 +14,9 @@
 
         <activity
             android:name=".MainActivity"
+            android:launchMode="singleTask"
             android:exported="true"
-            android:label="@string/app_name"
+            android:label="CS712AndroidApp"
             android:theme="@style/Theme.CS712AndroidApp">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
