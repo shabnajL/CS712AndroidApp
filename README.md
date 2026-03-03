@@ -11,10 +11,10 @@ The repository will be updated throughout the semester as assignments and projec
 <br>
 ## Assignment 2
 
-Name: Shabnaj Liaqat
+Name: Shabnaj Liaqat</t>
 Student ID: 1568382
 
-Device Used: Samsung SM-M127G
+Device Used: Samsung SM-M127G<br>
 Android Version: Android 13 (API 33)
 
 App includes:
@@ -29,7 +29,7 @@ App includes:
 <br>
 ## Assignment 3
 
-Device Used: Samsung SM-M127G
+Device Used: Samsung SM-M127G<br>
 Android Version: Android 13 (API 33)
 
 App includes:
@@ -48,7 +48,7 @@ App includes:
 <br> 
 ## Assignment 4
 
-Device Used: Samsung SM-M127G
+Device Used: Samsung SM-M127G<br>
 Android Version: Android 13 (API 33)
 
 App includes:
