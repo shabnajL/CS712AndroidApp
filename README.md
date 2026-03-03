@@ -45,3 +45,18 @@ App includes:
     - When the broadcast is received, display a Toast message: Broadcast received!<br>
     - Unregister the receiver in onStop() or onDestroy().<br>
 
+<br> 
+## Assignment 4
+
+Device Used: Samsung SM-M127G
+Android Version: Android 13 (API 33)
+
+App includes:
+>>> Manifest Configuration Reuse
+- Attribute Used: android:launchMode="singleTask" <br>
+- Application: Added to MainActivity in AndroidManifest.xml inside the <activity> declaration. <br>
+- Effect: If MainActivity is already running, launching it again reuses the existing instance rather than creating a new one. <br>
+- Why it Matters: This prevents multiple copies of the same activity from stacking up, making navigation more predictable and improving overall app performance and user experience.<br>
+
+<br>
+  
