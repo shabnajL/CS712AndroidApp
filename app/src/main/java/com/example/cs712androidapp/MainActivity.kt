@@ -50,6 +50,7 @@ class MainActivity : ComponentActivity() {
         }
 
 
+
         // second activity using an implicit intent
         val buttonImplicit = findViewById<Button>(R.id.buttonImplicit)
         buttonImplicit.setOnClickListener {
@@ -64,11 +65,11 @@ class MainActivity : ComponentActivity() {
 
 
         // start Service Button
-        val buttonStartService = findViewById<Button>(R.id.buttonStartService)
-        buttonStartService.setOnClickListener {
-            val intent = Intent(this, MyForegroundService::class.java)
-            startForegroundService(intent)
-        }
+       // val buttonStartService = findViewById<Button>(R.id.buttonStartService)
+       // buttonStartService.setOnClickListener {
+       //     val intent = Intent(this, MyForegroundService::class.java)
+       //     startForegroundService(intent)
+       // }
 
         //sendbroadcast button
         val buttonSendBroadcast = findViewById<Button>(R.id.buttonSendBroadcast)
@@ -76,6 +77,16 @@ class MainActivity : ComponentActivity() {
             val intent = Intent("com.example.MY_ACTION")
             sendBroadcast(intent)
         }
+
+        // third activity - Capture Image button
+        val buttonThird = findViewById<Button>(R.id.buttonThirdActivity)
+        buttonThird.setOnClickListener {
+            val intent = Intent(this, ThirdActivity::class.java)
+            startActivity(intent)
+        }
+
+
+
     }
 
 

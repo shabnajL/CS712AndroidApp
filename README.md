@@ -59,4 +59,19 @@ App includes:
 - Why it Matters: This prevents multiple copies of the same activity from stacking up, making navigation more predictable and improving overall app performance and user experience.<br>
 
 <br>
+## Assignment 5
+
+Device Used: Samsung SM-M127G<br>
+Android Version: Android 13 (API 33)
+
+App includes:
+>>> Extend CS712AndroidApp by implementing the following features:
+>>> 1.	Main Activity
+>>> a.	Add a button labeled “View Image Activity”.
+>>> b.	Clicking this button should launch a new activity (the third activity).
+>>> 2.	Third Activity
+>>> a.	Create a new Activity (the third activity).
+>>> b.	Add a “Capture Image” button at the top of the activity.
+>>> c.	Clicking the button should open the device camera using an intent.
+>>> d.	After capturing an image, display the captured image below the button. 
   
