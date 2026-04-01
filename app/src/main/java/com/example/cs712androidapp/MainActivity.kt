@@ -1,6 +1,7 @@
 package com.example.cs712androidapp
 
 import android.annotation.SuppressLint
+import android.Manifest
 import android.content.Intent
 import android.content.IntentFilter
 import android.os.Build
@@ -15,7 +16,10 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import android.widget.Toast
 import androidx.compose.ui.Modifier
+import androidx.core.content.ContextCompat
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.cs712androidapp.ui.theme.CS712AndroidAppTheme
 
@@ -25,6 +29,12 @@ class MainActivity : ComponentActivity() {
     @RequiresApi(Build.VERSION_CODES.O)
     @SuppressLint("UnspecifiedRegisterReceiverFlag")
 
+    private fun startForegroundNow() {
+        val intent = Intent(this, MyForegroundService::class.java)
+        ContextCompat.startForegroundService(this, intent)
+    }
+
+    @SuppressLint("UnspecifiedRegisterReceiverFlag")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -63,13 +73,24 @@ class MainActivity : ComponentActivity() {
         val filter = IntentFilter("com.example.MY_ACTION")
         registerReceiver(receiver, filter)
 
-
         // start Service Button
-       // val buttonStartService = findViewById<Button>(R.id.buttonStartService)
-       // buttonStartService.setOnClickListener {
-       //     val intent = Intent(this, MyForegroundService::class.java)
-       //     startForegroundService(intent)
-       // }
+        val startServiceButton = findViewById<Button>(R.id.buttonStartService)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            val permissionLauncher =
+                registerForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
+                    if (granted) {
+                        startForegroundNow()
+                    } else {
+                        Toast.makeText(this,
+                            "Notification permission denied",
+                            Toast.LENGTH_SHORT).show()
+                    }
+                }
+                permissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
+        } else {
+            startForegroundNow()
+        }
+
 
         //sendbroadcast button
         val buttonSendBroadcast = findViewById<Button>(R.id.buttonSendBroadcast)
