@@ -27,6 +27,7 @@ App includes:
     -	displaying a list of at least five mobile software engineering challenges <br>
     -	Including a button labeled Main Activity that returns to the main activity when clicked <br>
 <br>
+
 ## Assignment 3
 
 Device Used: Samsung SM-M127G<br>
@@ -46,6 +47,7 @@ App includes:
     - Unregister the receiver in onStop() or onDestroy().<br>
 
 <br> 
+
 ## Assignment 4
 
 Device Used: Samsung SM-M127G<br>
@@ -59,6 +61,7 @@ App includes:
 - Why it Matters: This prevents multiple copies of the same activity from stacking up, making navigation more predictable and improving overall app performance and user experience.<br>
 
 <br>
+
 ## Assignment 5
 
 Device Used: Samsung SM-M127G<br>
@@ -77,6 +80,7 @@ App includes:
 
 
 <br> 
+
 ## Assignment 6: UI Automator Test – CS712AndroidApp
 
 Framework: UI Automator (Android Instrumentation Testing)<br>
