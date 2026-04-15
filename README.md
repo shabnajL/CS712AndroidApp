@@ -55,10 +55,10 @@ Android Version: Android 13 (API 33)
 
 App includes:
 >>> Manifest Configuration Reuse
-- Attribute Used: android:launchMode="singleTask" <br>
-- Application: Added to MainActivity in AndroidManifest.xml inside the <activity> declaration. <br>
-- Effect: If MainActivity is already running, launching it again reuses the existing instance rather than creating a new one. <br>
-- Why it Matters: This prevents multiple copies of the same activity from stacking up, making navigation more predictable and improving overall app performance and user experience.<br>
+    - Attribute Used: android:launchMode="singleTask" <br>
+    - Application: Added to MainActivity in AndroidManifest.xml inside the <activity> declaration. <br>
+    - Effect: If MainActivity is already running, launching it again reuses the existing instance rather than creating a new       one. <br>
+    - Why it Matters: This prevents multiple copies of the same activity from stacking up, making navigation more                  predictable and improving overall app performance and user experience.<br>
 
 <br>
 
@@ -70,13 +70,13 @@ Android Version: Android 13 (API 33)
 App includes:
 >>> Extend CS712AndroidApp by implementing the following features:
 >>> 1.	Main Activity
->>> a.	Add a button labeled “View Image Activity”.
->>> b.	Clicking this button should launch a new activity (the third activity).
+        a.	Add a button labeled “View Image Activity”.
+        b.	Clicking this button should launch a new activity (the third activity).
 >>> 2.	Third Activity
->>> a.	Create a new Activity (the third activity).
->>> b.	Add a “Capture Image” button at the top of the activity.
->>> c.	Clicking the button should open the device camera using an intent.
->>> d.	After capturing an image, display the captured image below the button. 
+        a.	Create a new Activity (the third activity).
+        b.	Add a “Capture Image” button at the top of the activity.
+        c.	Clicking the button should open the device camera using an intent.
+        d.	After capturing an image, display the captured image below the button. 
 
 
 <br> 
@@ -88,10 +88,9 @@ Device Used: Samsung SM-M127G<br>
 Android Version: Android 13 (API 33)
 
 The automated test performs the following steps:
->>> Launches the application from the device/emulator home screen using the app launcher icon.
->>> Navigates to the second activity by clicking the “Start Activity Explicitly” button on the main screen.
->>> Verifies that the second activity displays at least one expected mobile software engineering challenge(e.g., Security, Device Fragmentation) listed in the app.
-
+>>> 1. Launches the application from the device/emulator home screen using the app launcher icon.
+    2. Navigates to the second activity by clicking the “Start Activity Explicitly” button on the main screen.
+    3. Verifies that the second activity displays at least one expected mobile software engineering challenge(e.g.,                 Security, Device Fragmentation) listed in the app.
 
 <br>
   
