@@ -89,8 +89,8 @@ Android Version: Android 13 (API 33)
 
 The automated test performs the following steps:
 >>> 1. Launches the application from the device/emulator home screen using the app launcher icon.
-    2. Navigates to the second activity by clicking the “Start Activity Explicitly” button on the main screen.
-    3. Verifies that the second activity displays at least one expected mobile software engineering challenge(e.g.,                 Security, Device Fragmentation) listed in the app.
+>>> 2. Navigates to the second activity by clicking the “Start Activity Explicitly” button on the main screen.
+>>> 3. Verifies that the second activity displays at least one expected mobile software engineering challenge(e.g.,                 Security, Device Fragmentation) listed in the app.
 
 <br>
   
