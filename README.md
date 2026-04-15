@@ -74,4 +74,20 @@ App includes:
 >>> b.	Add a “Capture Image” button at the top of the activity.
 >>> c.	Clicking the button should open the device camera using an intent.
 >>> d.	After capturing an image, display the captured image below the button. 
+
+
+<br> 
+## Assignment 6: UI Automator Test – CS712AndroidApp
+
+Framework: UI Automator (Android Instrumentation Testing)<br>
+Device Used: Samsung SM-M127G<br>
+Android Version: Android 13 (API 33)
+
+The automated test performs the following steps:
+>>> Launches the application from the device/emulator home screen using the app launcher icon.
+>>> Navigates to the second activity by clicking the “Start Activity Explicitly” button on the main screen.
+>>> Verifies that the second activity displays at least one expected mobile software engineering challenge(e.g., Security, Device Fragmentation) listed in the app.
+
+
+<br>
   
