@@ -34,6 +34,13 @@ class MainActivity : ComponentActivity() {
         ContextCompat.startForegroundService(this, intent)
     }
 
+    private val REQUEST_CODE = 100
+
+    private fun openSecondActivity(){
+        val intent = Intent(this, SecondActivity::class.java)
+        startActivity(intent)
+    }
+
     @SuppressLint("UnspecifiedRegisterReceiverFlag")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,8 +62,17 @@ class MainActivity : ComponentActivity() {
         // second activity using an explicit intent
         val buttonExplicit = findViewById<Button>(R.id.buttonExplicit)
         buttonExplicit.setOnClickListener {
-            val intent = Intent(this, SecondActivity::class.java)
-            startActivity(intent)
+            if(checkSelfPermission("com.example.cs712androidapp.MSE712") !=
+                android.content.pm.PackageManager.PERMISSION_GRANTED) {
+
+                requestPermissions(
+                    arrayOf("com.example.cs712androidapp.MSE712"), REQUEST_CODE
+                )
+                }
+            else{
+                openSecondActivity()
+            }
+
         }
 
 
@@ -88,7 +104,14 @@ class MainActivity : ComponentActivity() {
                 }
                 permissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
         } else {
-            startForegroundNow()
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                startForegroundNow()
+            } else {
+                // Fallback for older devices (API 24/25)
+                val intent = Intent(this, MyForegroundService::class.java)
+                startService(intent)
+            }
+
         }
 
 
@@ -110,6 +133,20 @@ class MainActivity : ComponentActivity() {
 
     }
 
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String?>,
+        grantResults: IntArray,
+        deviceId: Int
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults, deviceId)
+        if(requestCode == REQUEST_CODE && grantResults.isNotEmpty() &&
+            grantResults[0] == android.content.pm.PackageManager.PERMISSION_GRANTED){
+
+            openSecondActivity()
+        }
+
+    }
 
     override fun onDestroy() {
         super.onDestroy()
