@@ -93,4 +93,17 @@ The automated test performs the following steps:
 >>> 3. Verifies that the second activity displays at least one expected mobile software engineering challenge(e.g.,                 Security, Device Fragmentation) listed in the app.
 
 <br>
+## Assignment 7: Define, Protect, and Request Permissions – CS712AndroidApp
+
+Device Used: Samsung SM-M127G<br>
+Android Version: Android 13 (API 33)
+
+App extends by implementing a custom Android permission, protecting an exported activity, <br>
+and requesting the permission at runtime.
+--- ## Features Implemented### 
+>>> 1. Created a custom permission named: “com.example.cs712androidapp.MSE712” with protection level to dangerous in the Android manifest file.
+>>> 2. Protected Exported Activity - The second activity (SecondActivity) was exported and protected using the custom permission.
+>>> 3. Runtime Permission Request - The permission is requested in MainActivity before launching SecondActivity.
+<br>
+>>> Resource: https://developer.android.com/training/permissions/requesting
   
